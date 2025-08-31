@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">IntentoActividad</string>
+
+    <string name="Texto1">Seleccione los producto</string>
+    <string name="Texto2">(solo vendemos maximo de una unidad por comprador)</string>
+
+    <string name="precio1">$1000</string>
+    <string name="precio2">$2500</string>
+    <string name="precio3">$1500</string>
+    <string name="precio4">$2000</string>
+    <string name="precio5">$3000</string>
+
+    <string name="Texto8">Prototines por Minoria</string>
+
+    <string name="Boton1">Ir a CheckOut</string>
+
+    <string name="Check1">Arduino</string>
+    <string name="Check2">Diodos Led (pack de 20)</string>
+    <string name="Check3">Resistencias 220Ω (pack de 10)</string>
+    <string name="Check4">Protoboard</string>
+    <string name="Check5">Sensor Ultrasonico</string>
+
+    <string name="Texto2pant1">CheckOut</string>
+    <string name="Texto2pant2">Total:</string>
+    <string name="Texto2pant3">___</string>
+    <string name="Texto2pant4">Items:</string>
+    <string name="Texto2pant5">Cuanto abona?:</string>
+    <string name="txtFinal"></string>
+
+    <string name="Boton2pant1">Volver</string>
+    <string name="Boton2pant2">Pagar</string>
+
+</resources>
