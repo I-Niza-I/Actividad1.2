@@ -30,11 +30,11 @@
     <string name="Boton2pant1">Volver</string>
     <string name="Boton2pant2">Pagar</string>
 
-    <string name="cantidad1">0</string>
-    <string name="cantidad2">0</string>
-    <string name="cantidad3">0</string>
-    <string name="cantidad4">0</string>
-    <string name="cantidad5">0</string>
+    <string name="cantidad1">1</string>
+    <string name="cantidad2">1</string>
+    <string name="cantidad3">1</string>
+    <string name="cantidad4">1</string>
+    <string name="cantidad5">1</string>
 
     <string name="mensajeAbono">Ingrese el monto a abonar</string>
     <string name="productoSelec">Productos seleccionados</string>

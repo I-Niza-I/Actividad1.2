@@ -9,54 +9,6 @@
     tools:layout_editor_absoluteX="19dp"
     tools:layout_editor_absoluteY="0dp">
 
-    <EditText
-        android:id="@+id/cantidadProd3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:maxLength="2"
-        android:autofillHints=""
-        android:hint="@string/cantidad3"
-        android:inputType="number"
-        android:text="@string/cantidad3"
-        app:layout_constraintEnd_toEndOf="@+id/cantidadProd2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/chkItem3"
-        app:layout_constraintTop_toBottomOf="@+id/cantidadProd2" />
-
-    <EditText
-        android:id="@+id/cantidadProd4"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:maxLength="2"
-        android:autofillHints=""
-        android:hint="@string/cantidad4"
-        android:inputType="number"
-        android:text="@string/cantidad4"
-        app:layout_constraintEnd_toEndOf="@+id/cantidadProd3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/chkItem4"
-        app:layout_constraintTop_toBottomOf="@+id/cantidadProd3" />
-
-    <EditText
-        android:id="@+id/cantidadProd5"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="41dp"
-        android:ems="10"
-        android:maxLength="2"
-        android:autofillHints=""
-        android:hint="@string/cantidad5"
-        android:inputType="number"
-        android:text="@string/cantidad5"
-        app:layout_constraintEnd_toEndOf="@+id/cantidadProd4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/chkItem5"
-        app:layout_constraintTop_toBottomOf="@+id/cantidadProd4" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -86,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="actvis5"
         android:text="@string/Check5"
         app:layout_constraintStart_toStartOf="@+id/chkItem4"
         app:layout_constraintTop_toBottomOf="@+id/chkItem4" />
@@ -95,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="actvis4"
         android:text="@string/Check4"
         app:layout_constraintStart_toStartOf="@+id/chkItem3"
         app:layout_constraintTop_toBottomOf="@+id/chkItem3" />
@@ -104,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="actvis3"
         android:text="@string/Check3"
         app:layout_constraintStart_toStartOf="@+id/chkItem2"
         app:layout_constraintTop_toBottomOf="@+id/chkItem2" />
@@ -112,50 +67,41 @@
         android:id="@+id/chkItem1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:onClick="actvis1"
         android:text="@string/Check1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.011" />
 
     <CheckBox
         android:id="@+id/chkItem2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="actvis2"
         android:text="@string/Check2"
         app:layout_constraintStart_toStartOf="@+id/chkItem1"
         app:layout_constraintTop_toBottomOf="@+id/chkItem1" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Texto2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
 
     <TextView
         android:id="@+id/precioItem1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="184dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="90dp"
         android:text="@string/precio1"
         app:layout_constraintStart_toEndOf="@+id/chkItem1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/precioItem4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="80dp"
         android:text="@string/precio4"
         app:layout_constraintEnd_toEndOf="@+id/precioItem3"
         app:layout_constraintHorizontal_bias="1.0"
@@ -178,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="56dp"
         android:text="@string/precio5"
         app:layout_constraintEnd_toEndOf="@+id/precioItem4"
         app:layout_constraintHorizontal_bias="1.0"
@@ -214,30 +160,83 @@
         android:id="@+id/cantidadProd1"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/cantidad1"
         android:inputType="number"
         android:maxLength="2"
-        android:autofillHints=""
         android:text="@string/cantidad1"
-        android:hint="@string/cantidad1"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/chkItem1"
         app:layout_constraintEnd_toStartOf="@+id/precioItem1"
-        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintHorizontal_bias="0.794"
         app:layout_constraintStart_toEndOf="@+id/chkItem1"
         app:layout_constraintTop_toTopOf="@+id/chkItem1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/cantidadProd3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/cantidad3"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/cantidad3"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem3"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd2" />
+
+    <EditText
+        android:id="@+id/cantidadProd5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/cantidad5"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/cantidad5"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem5"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd4" />
+
+    <EditText
+        android:id="@+id/cantidadProd4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/cantidad4"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/cantidad4"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem4"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd3" />
 
     <EditText
         android:id="@+id/cantidadProd2"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/cantidad2"
         android:inputType="number"
         android:maxLength="2"
-        android:autofillHints=""
-        android:hint="@string/cantidad2"
         android:text="@string/cantidad2"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/cantidadProd1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/chkItem2"

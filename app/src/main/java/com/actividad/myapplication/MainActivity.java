@@ -104,6 +104,55 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    public void actvis1(View view){
+        CheckBox chk1 = findViewById(R.id.chkItem1);
+
+        if (chk1.isChecked()){
+            cantidadProd1.setVisibility(View.VISIBLE);
+        } else {
+            cantidadProd1.setVisibility(View.INVISIBLE);
+            cantidadProd1.setText("1");
+        }
+    }
+    public void actvis2(View view){
+        CheckBox chk2 = findViewById(R.id.chkItem2);
+
+        if (chk2.isChecked()){
+            cantidadProd2.setVisibility(View.VISIBLE);
+        } else {
+            cantidadProd2.setVisibility(View.INVISIBLE);
+            cantidadProd2.setText("1");
+        }
+    }
+    public void actvis3(View view){
+        CheckBox chk3 = findViewById(R.id.chkItem3);
+        if (chk3.isChecked()){
+            cantidadProd3.setVisibility(View.VISIBLE);
+        } else {
+            cantidadProd3.setVisibility(View.INVISIBLE);
+            cantidadProd3.setText("1");
+        }
+    }
+    public void actvis4(View view){
+        CheckBox chk4 = findViewById(R.id.chkItem4);
+        if (chk4.isChecked()){
+            cantidadProd4.setVisibility(View.VISIBLE);
+        } else {
+            cantidadProd4.setVisibility(View.INVISIBLE);
+            cantidadProd4.setText("1");
+        }
+    }
+    public void actvis5(View view){
+        CheckBox chk5 = findViewById(R.id.chkItem5);
+        if (chk5.isChecked()){
+            cantidadProd5.setVisibility(View.VISIBLE);
+        } else {
+            cantidadProd5.setVisibility(View.INVISIBLE);
+            cantidadProd5.setText("1");
+        }
+    }
+
     public void enviarDatos(View view){
 
         if (!productoSeleccionado()){
@@ -125,4 +174,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
 }
