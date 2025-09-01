@@ -15,8 +15,8 @@
     <string name="Boton1">Ir a CheckOut</string>
 
     <string name="Check1">Arduino</string>
-    <string name="Check2">Diodos Led (pack de 20)</string>
-    <string name="Check3">Resistencias 220Ω (pack de 10)</string>
+    <string name="Check2">Diodos Led x20</string>
+    <string name="Check3">Resistencias 220Ω x10</string>
     <string name="Check4">Protoboard</string>
     <string name="Check5">Sensor Ultrasonico</string>
 
@@ -29,5 +29,12 @@
 
     <string name="Boton2pant1">Volver</string>
     <string name="Boton2pant2">Pagar</string>
+
+    <string name="cantidad1">0</string>
+    <string name="cantidad2">0</string>
+    <string name="cantidad3">0</string>
+    <string name="cantidad4">0</string>
+    <string name="cantidad5">0</string>
+
 
 </resources>

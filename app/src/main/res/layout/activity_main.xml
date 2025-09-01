@@ -9,6 +9,48 @@
     tools:layout_editor_absoluteX="19dp"
     tools:layout_editor_absoluteY="0dp">
 
+    <EditText
+        android:id="@+id/cantidadProd3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:maxLength="2"
+        android:inputType="number"
+        android:text="@string/cantidad3"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem3"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd2" />
+
+    <EditText
+        android:id="@+id/cantidadProd4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:maxLength="2"
+        android:inputType="number"
+        android:text="@string/cantidad4"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem4"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd3" />
+
+    <EditText
+        android:id="@+id/cantidadProd5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:maxLength="2"
+        android:inputType="number"
+        android:text="@string/cantidad5"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem5"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd4" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -26,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
         android:backgroundTint="#F80C0C"
-        android:onClick="IraSegAct"
+        android:onClick="enviarDatos"
         android:text="@string/Boton1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,5 +203,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.065" />
+
+    <EditText
+        android:id="@+id/cantidadProd1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/cantidad1"
+        app:layout_constraintBottom_toBottomOf="@+id/chkItem1"
+        app:layout_constraintEnd_toStartOf="@+id/precioItem1"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toEndOf="@+id/chkItem1"
+        app:layout_constraintTop_toTopOf="@+id/chkItem1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/cantidadProd2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/cantidad2"
+        app:layout_constraintEnd_toEndOf="@+id/cantidadProd1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chkItem2"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadProd1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

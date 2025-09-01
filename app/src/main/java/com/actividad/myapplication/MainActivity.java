@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox producto4;
     CheckBox producto5;
 
+    EditText cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         producto4 = findViewById(R.id.chkItem4);
         producto5 = findViewById(R.id.chkItem5);
 
+        cantidadProd1 = findViewById(R.id.cantidadProd1);
+        cantidadProd2 = findViewById(R.id.cantidadProd2);
+        cantidadProd3 = findViewById(R.id.cantidadProd3);
+        cantidadProd4 = findViewById(R.id.cantidadProd4);
+        cantidadProd5 = findViewById(R.id.cantidadProd5);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -45,19 +53,19 @@ public class MainActivity extends AppCompatActivity {
         int total = 0;
 
         if(producto1.isChecked()){
-            total += 1000;
+            total += 1000 * Integer.parseInt(cantidadProd1.getText().toString());
         }
         if(producto2.isChecked()){
-            total += 2500;
+            total += 2500 * Integer.parseInt(cantidadProd2.getText().toString());
         }
         if(producto3.isChecked()){
-            total += 1500;
+            total += 1500 * Integer.parseInt(cantidadProd3.getText().toString());
         }
         if(producto4.isChecked()){
-            total += 2000;
+            total += 2000 * Integer.parseInt(cantidadProd4.getText().toString());
         }
         if(producto5.isChecked()){
-            total += 3000;
+            total += 3000 * Integer.parseInt(cantidadProd5.getText().toString());
         }
 
         return total;
@@ -86,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public boolean productoSelecciondo(){
+    public boolean productoSeleccionado(){
         if(producto1.isChecked() || producto2.isChecked() || producto3.isChecked() ||
                 producto4.isChecked() || producto5.isChecked() ){
             return true;
@@ -96,9 +104,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void IraSegAct(View view){
+    public void enviarDatos(View view){
 
-        if (!productoSelecciondo()){
+        if (!productoSeleccionado()){
             new AlertDialog.Builder(this)
                     .setTitle("Error")
                     .setMessage("Seleccione algun producto a comprar")
