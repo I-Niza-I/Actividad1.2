@@ -36,5 +36,8 @@
     <string name="cantidad4">0</string>
     <string name="cantidad5">0</string>
 
+    <string name="mensajeAbono">Ingrese el monto a abonar</string>
+    <string name="productoSelec">Productos seleccionados</string>
+
 
 </resources>
