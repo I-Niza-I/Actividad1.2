@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox producto4;
     CheckBox producto5;
 
-    EditText cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
+    TextView cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         cantidadProd3 = findViewById(R.id.cantidadProd3);
         cantidadProd4 = findViewById(R.id.cantidadProd4);
         cantidadProd5 = findViewById(R.id.cantidadProd5);
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -155,6 +158,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void enviarDatos(View view){
 
+        int cant1,cant2,cant3,cant4,cant5;
+
+        cant1 = Integer.parseInt(cantidadProd1.getText().toString());
+        cant2 = Integer.parseInt(cantidadProd2.getText().toString());
+        cant3 = Integer.parseInt(cantidadProd3.getText().toString());
+        cant4 = Integer.parseInt(cantidadProd4.getText().toString());
+        cant5 = Integer.parseInt(cantidadProd5.getText().toString());
         if (!productoSeleccionado()){
             new AlertDialog.Builder(this)
                     .setTitle("Error")
@@ -162,6 +172,12 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("OK", null)
                     .show();
 
+        }else if(cant1 <= 0 || cant2 <= 0 || cant3 <= 0 || cant4 <= 0 || cant5 <= 0){
+            new AlertDialog.Builder(this)
+                    .setTitle("Error")
+                    .setMessage("Uno o mas productos tienen una cantidad invalida")
+                    .setPositiveButton("OK", null)
+                    .show();
         }
         else{
             Intent intent = new Intent(this,SegAct.class);
