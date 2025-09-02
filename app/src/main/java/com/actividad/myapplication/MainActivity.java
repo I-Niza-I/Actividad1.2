@@ -18,19 +18,18 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    CheckBox producto1;
-    CheckBox producto2;
-    CheckBox producto3;
-    CheckBox producto4;
-    CheckBox producto5;
+    // Declaracion de componentes a utilizar de la interfaz
+    CheckBox producto1, producto2, producto3, producto4, producto5;
 
-    TextView cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
+    EditText cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        // Inicializacion de los componentes por medio de la ID
         producto1 = findViewById(R.id.chkItem1);
         producto2 = findViewById(R.id.chkItem2);
         producto3 = findViewById(R.id.chkItem3);
@@ -43,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
         cantidadProd4 = findViewById(R.id.cantidadProd4);
         cantidadProd5 = findViewById(R.id.cantidadProd5);
 
-
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -52,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    // **********************************************************
+    //      Metodo Para calcular el total del precio a pagar
+    // **********************************************************
     public int calcularPrecio(){
         int total = 0;
 
@@ -74,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
         return total;
     }
 
+
+    // ***********************************************************************
+    //      Metodo que devuelve una lista con los productos seleccionados
+    // ***********************************************************************
     public ArrayList<String> agregarProductos(){
         ArrayList<String> productos = new ArrayList<>();
 
@@ -94,9 +99,38 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return productos;
-
     }
 
+
+    // **************************************************************************************
+    //      Metodo que devuelve una lista con la cantidad de los productos seleccionados
+    // **************************************************************************************
+    public ArrayList<String> cantidadProductos(){
+        ArrayList<String> cantidades = new ArrayList<>();
+
+        if(producto1.isChecked()){
+            cantidades.add(cantidadProd1.getText().toString());
+        }
+        if(producto2.isChecked()){
+            cantidades.add(cantidadProd2.getText().toString());
+        }
+        if(producto3.isChecked()){
+            cantidades.add(cantidadProd3.getText().toString());
+        }
+        if(producto4.isChecked()){
+            cantidades.add(cantidadProd4.getText().toString());
+        }
+        if(producto5.isChecked()){
+            cantidades.add(cantidadProd5.getText().toString());
+        }
+
+        return cantidades;
+    }
+
+
+    // ***************************************************************************
+    //      Metodo para verificar que haya al menos una checkbox seleccionada
+    // ***************************************************************************
     public boolean productoSeleccionado(){
         if(producto1.isChecked() || producto2.isChecked() || producto3.isChecked() ||
                 producto4.isChecked() || producto5.isChecked() ){
@@ -108,6 +142,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // ***********************************************************************************
+    //      Metodos para Activar o Desactivar la visibilidad de la cantidad en funcion
+    //                 de si su respectiva checkbox esta seleccionada o no
+    // ***********************************************************************************
     public void actvis1(View view){
         CheckBox chk1 = findViewById(R.id.chkItem1);
 
@@ -156,8 +194,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void enviarDatos(View view){
 
+    // ***************************************************************************************
+    //      Metodo Para enviar los datos correspondientes y ejecutar la segunda activity
+    // ***************************************************************************************
+    public void enviarDatos(View view){
+        // Declaracion, conversion y definicion de las cantidades
         int cant1,cant2,cant3,cant4,cant5;
 
         cant1 = Integer.parseInt(cantidadProd1.getText().toString());
@@ -165,29 +207,39 @@ public class MainActivity extends AppCompatActivity {
         cant3 = Integer.parseInt(cantidadProd3.getText().toString());
         cant4 = Integer.parseInt(cantidadProd4.getText().toString());
         cant5 = Integer.parseInt(cantidadProd5.getText().toString());
+
+        // Valida que haya al menos 1 producto seleccionado
         if (!productoSeleccionado()){
+
             new AlertDialog.Builder(this)
                     .setTitle("Error")
                     .setMessage("Seleccione algun producto a comprar")
                     .setPositiveButton("OK", null)
                     .show();
 
-        }else if(cant1 <= 0 || cant2 <= 0 || cant3 <= 0 || cant4 <= 0 || cant5 <= 0){
+        }
+        // Valida que las cantidades sean mayores a 0
+        else if(cant1 <= 0 || cant2 <= 0 || cant3 <= 0 || cant4 <= 0 || cant5 <= 0){
+
             new AlertDialog.Builder(this)
                     .setTitle("Error")
                     .setMessage("Uno o mas productos tienen una cantidad invalida")
                     .setPositiveButton("OK", null)
                     .show();
+
         }
+        // Si las validaciones se cumplen, envia los datos a la segunda activity
         else{
+
             Intent intent = new Intent(this,SegAct.class);
             startActivity(intent);
 
-
-            intent.putExtra("productos", agregarProductos());
+            intent.putStringArrayListExtra("productos", agregarProductos());
+            intent.putStringArrayListExtra("cantidadesProductos", cantidadProductos());
             intent.putExtra("total", calcularPrecio());
 
-            startActivity(intent);
+            startActivity(intent); // Inicia/Ejecuta la segunda activiy
+
         }
     }
 
