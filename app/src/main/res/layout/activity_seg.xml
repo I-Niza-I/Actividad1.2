@@ -8,18 +8,6 @@
     tools:context=".SegAct">
 
     <TextView
-        android:id="@+id/txtFinal"
-        android:layout_width="321dp"
-        android:layout_height="53dp"
-        android:text=""
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="134dp"
         android:layout_height="33dp"
