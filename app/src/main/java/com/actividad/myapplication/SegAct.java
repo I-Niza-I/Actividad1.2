@@ -23,7 +23,7 @@ public class SegAct extends AppCompatActivity {
     int abono;
     ArrayList<String> productos;
     ArrayList<String> cantidadProductos;
-    TextView txtTotal, txtProductos, txtFinal;
+    TextView txtTotal, txtProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,6 @@ public class SegAct extends AppCompatActivity {
         txtProductos.setText(organizarArray());
         txtTotal.setText("Total a pagar: $" + precioTotal);
 
-        txtFinal = findViewById(R.id.txtFinal);
         EditText editAbona = findViewById(R.id.txtAbona);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

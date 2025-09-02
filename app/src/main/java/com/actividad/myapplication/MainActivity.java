@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Declaracion de componentes a utilizar de la interfaz
     CheckBox producto1, producto2, producto3, producto4, producto5;
-
     EditText cantidadProd1,cantidadProd2, cantidadProd3, cantidadProd4, cantidadProd5 ;
 
     @Override
