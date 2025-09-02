@@ -67,7 +67,7 @@ public class SegAct extends AppCompatActivity {
         return organizados;
     }
 
-
+//aaaaaaaaaaa
     // ************************************************************
     //      Metodo para procesar el pago y calcular el vuelto
     // ************************************************************
